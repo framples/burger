@@ -1,7 +1,18 @@
-//import orm.js into burger.js
+let orm = require("../config/orm.js");
 
-//create code that will call the ORM functions using burger specific input for the ORM
+let burger = {
+    all: function (cb) {
+        orm.all("burgers", function (res) {
+            cb(res);
+        });
+    },
 
+    update: function(id, cb) {
+        orm.update("burgers", id, cb);
+    },
 
-
-module.exports = burger();
+    create: function(name,cb) {
+        orm.create("burgers", name, cb);
+    }
+}
+    module.exports = burger;
