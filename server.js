@@ -6,9 +6,10 @@ let exphbs = require("express-handlebars");
 let PORT = process.env.PORT || 8080;
 
 let app = express();
-app.use(express.static(__dirname + "/public"));
+let path = require("path");
+app.use(express.static(path.join(__dirname + "/public")));
 
-app.unsubscribe(bodyParser.urlencoded({
+app.use(bodyParser.urlencoded({
     extended: false
 }));
 
@@ -19,13 +20,17 @@ app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.set("view engine", "handlebars");
 
 let routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
-app.use("/burgers/update", routes);
-app.use("/burgers/create", routes);
+//app.use("/burgers/update", routes);
+//app.use("/burgers/create", routes);
 
 
-app.listen(PORT);
-console.log("LISTENING ON PORT: " + PORT);
+app.listen(PORT, function(){
+    console.log("LISTENING ON PORT: " + PORT);
+});
