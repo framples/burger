@@ -1,0 +1,41 @@
+body {
+    background-image: url("https://www.fatburgercanada.com/wp-content/uploads/2015/07/fatburger_0001_DoubleFatCheese-541x633.png"),linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+    background-size: 100 100px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+pre {
+    font-size: 1.5em;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+
+}
+
+.form-control[readonly] {
+    color: black;
+    margin: 5px;
+    border: 20px;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#head {
+    background-image: url("https://www.fatburgercanada.com/wp-content/uploads/2015/07/fatburger_0001_DoubleFatCheese-541x633.png"),linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+    opacity: 0.5%;
+    background-size: 100 100px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    
+}
+
+#maindiv {
+    display: block;
+    margin-left: 50%;
+    margin-right: 50%;
+    background-color: white;
+}
